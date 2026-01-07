@@ -12,16 +12,9 @@ from django.db import models
 # Compares to ERD, Todo is an Entity
 class Todo(models.Model):
 
-    # title is an attribute
+    # attribute
     title = models.CharField(max_length=255)
-
-
-    '''
-        - ForeignKey()
-        - settings.AUTH_USER_MODEL
-        - on_delete=models.CASCADE
-        - related_name="todos"
-    '''
+    created_at = models.DateTimeField(auto_now_add=True)
     
     user = models.ForeignKey(
         settings.AUTH_USER_MODEL,
@@ -31,3 +24,18 @@ class Todo(models.Model):
 
     def __str__(self):
         return self.title
+    
+from rest_framework import serializers
+from .models import Todo
+
+'''
+    ModelSerializer is a Mixture of Model and Serializer
+    It will generate columns depends on Model,and remain the data structure.
+'''
+
+
+# Define the serializer to serialize Todo class
+class TodoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Todo
+        fields = ['id','title','created_at'] # prohibit frontend deliever the 'user' data
