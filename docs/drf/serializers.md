@@ -72,3 +72,7 @@ class TodoSerializer(serializers.ModelSerializer):
 <span style='font-size:24px;font-family:Segoe Print'>2. user should not be controlled by client</span>
 
 <span style='font-size:24px;font-family:Segoe Print'>3. ownership is a system responsibility</span>
+
+# Data Flow: Create Todo
+
+<span style='font-size:24px;'>Client JSON -> Serializer(validate fields) -> View(bind request.user) -> Serializer.create() -> Model -> DB</span>

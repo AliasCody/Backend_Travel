@@ -1,3 +1,14 @@
+# Some OOP words clearify.
+<span style='font-size:24px;font-family:Segoe Print;background-color:gray;color:blue'>1. Instance</span>
+
+<span style='font-size:24px;font-family:Segoe Print'>In model,when you define a class call `User`,and you create a user name `Cody`,than `Cody` will be an **instance** of class `User`.</span>
+
+<span style='font-size:24px;font-family:Segoe Print;background-color:gray;color:blue'>2. Attribute</span>
+
+<span style='font-size:24px;font-family:Segoe Print'>Information that attach on an instance,for example you create an instance `Cody` of class `User`,which have a `name` column(`User` has defined a `name` column),we assign the string `Cheng Wang` to it,than `name` is the **attribute**,and `Cheng Wang` is the **value** of that attribute.</span>
+
+
+
 # What is Model?
 
 - The following description you can find in [Django documentation](https://docs.djangoproject.com/en/6.0/topics/db/models/)
