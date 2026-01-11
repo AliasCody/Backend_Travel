@@ -1,0 +1,6 @@
+from django.urls import path
+from .views import TodoCreateView
+
+urlpatterns = [
+    path("",TodoCreateView.as_view()) # as_view() will create a packer
+]
