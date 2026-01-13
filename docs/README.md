@@ -9,5 +9,4 @@
 
 <span style='font-size:24px;font-family:Segoe Print'>schedule/: Reference planning documents</span>
 
-<span style='font-size:24px;font-family:Segoe Print'>my_project/: Reference Dream plan</span>
 
